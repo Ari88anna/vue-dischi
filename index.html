@@ -31,11 +31,22 @@
         <!-- MAIN -->
         <main>
 
+            <div class="musical-genre">
+                <label for="genre">Musical Genre</label>
+
+                <select id="genre"> 
+
+                    <option v-for="element in albumList" value="element.genre">{{element.genre}}</option>
+                
+    
+                </select>
+            </div>
+
             <!-- main content -->
-            <div id="main-content">              
+            <div id="main-content">
 
                 <!-- single album -->
-                <div v-for="album in albumList" class="album-container">
+                <div v-for="(album, index) in albumList" class="album-container">
 
                     <div class="inner-album">
                         <div class="album-img">

@@ -28,26 +28,27 @@ main {
     background: #1e2e3c;
 }
 
+.musical-genre {
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+
 #main-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 50px 0;
 }
-
+/* album container */
 .album-container {
     width: calc(100% / 6 - 30px);
     text-align: center;    
     margin: 0 15px;
     margin-bottom: 40px;
-    border-radius: 5px;
-
-    /* test */
+    border-radius: 5px;   
     background-color: #2e3b46;
 }
-
-
-
 
 .inner-album {
     padding: 30px;
