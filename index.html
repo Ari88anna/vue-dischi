@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>Vue-dischi</title>
+</head>
+<body>
+
+    <div id="root">
+
+        <!-- HEADER -->
+        <header>
+            <div id="header-logo">
+                <img src="img/download.png" alt="">
+            </div>
+        </header>
+        <!-- end HEADER -->
+
+        <!-- MAIN -->
+        <main>
+
+            <!-- main content -->
+            <div id="main-content">
+
+                <!-- single album -->
+                <div class="album-container">
+
+                    <div class="inner-album">
+                        <div class="album-img">
+                            <img src="https://img.discogs.com/vknPDdrqRbT92pNRX0W4I5N91jg=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1246953-1448927086-6590.jpeg.jpg" alt="">
+                        </div>
+                        <div class="album-title">Live at Wembley</div>
+                        <div class="album-author">Queen</div>
+                        <div class="album-year">1992</div>
+
+                    </div>
+
+                </div>
+                <!-- end single album -->
+
+                <!-- single album -->
+                <div v-for="album in albumList" class="album-container">
+
+                    <div class="inner-album">
+                        <div class="album-img">
+                            <img src="https://img.discogs.com/vknPDdrqRbT92pNRX0W4I5N91jg=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1246953-1448927086-6590.jpeg.jpg" alt="">
+                        </div>
+                        <div class="album-title">Live at Wembley</div>
+                        <div class="album-author">Queen</div>
+                        <div class="album-year">1992</div>
+
+                    </div>
+
+                </div>
+                <!-- end single album -->
+
+            </div>
+            <!-- end main content -->
+
+        </main>
+        <!-- end MAIN -->
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
