@@ -34,19 +34,23 @@
             <div class="musical-genre">
                 <label for="genre">Musical Genre</label>
 
-                <select id="genre"> 
+                <select id="genre" v-model="activeGenre"> 
 
-                    <option v-for="genre in musicGenre" value="element.genre">{{genre}}</option>
-                
+                    <option value="">All</option>
+                    <option v-for="genre in musicGenre" :value="genre" >{{genre}}</option>
+                    
     
                 </select>
+                
             </div>
 
             <!-- main content -->
             <div id="main-content">
 
                 <!-- single album -->
-                <div v-for="(album, index) in albumList" class="album-container">
+                <div class="album-container" 
+                    v-for="album in albumList"
+                    v-if="activeGenre == '' || activeGenre == album.genre">
 
                     <div class="inner-album">
                         <div class="album-img">

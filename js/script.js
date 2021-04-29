@@ -2,8 +2,15 @@ var app = new Vue({
     el: '#root',
     data: {
         albumList : [],
-        musicGenre: []
+        musicGenre: [],
+        activeGenre: '',
                           
+    },
+    methods: {
+        seletGenre(index) {
+            this.activeGenre = index;
+            console.log(this.activeGenre)
+        }
     },
     
     mounted() {
@@ -12,13 +19,18 @@ var app = new Vue({
             .then((response) => {
                 this.albumList = response.data.response;
 
+                this.albumList.sort((a, b) => {
+                    return a.year - b.year;
+                })
+
                 this.albumList.forEach( (element) => {
 
                     if (this.musicGenre.includes(element.genre) == false ) {
                         this.musicGenre.push(element.genre)                        
                     }
 
-                }) 
+                });     
+                
                 
             });               
        
